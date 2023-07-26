@@ -2,21 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <style>
+        .message {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a href="{{ url_for('index') }}">FlaskApp</a>
-            <a href="#">About</a>
-        </nav>
-        <hr>
-        <div class="content">
-            {% block content %} {% endblock %}
-        </div>
+    <nav>
+        <a href="{{ url_for('index') }}">FlaskApp</a>
+        <a href="#">About</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
     </div>
 </body>
 </html>

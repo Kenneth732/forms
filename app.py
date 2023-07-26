@@ -8,12 +8,10 @@ messages = [
         'content': 'Message One Content'
     },
     {
-        'title: Message Two',
-        'content: Message Two'
+        'title': 'Message Two',
+        'content': 'Message Two Content'
     }
 ]
-
 @app.route('/')
 def index():
-    return render_template('index.html', messages=messages)
-
+    render_template('index.html', messages=messages)
