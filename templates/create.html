@@ -1,7 +1,23 @@
-{%  %}
+{% extends 'base.html' %}
 
 
-{%  %}
+{% block content %}
+    <h1>{% block title %} Add a New Message {% endblock %}</h1>
 
+    <form method="post">
+        <label for="title">Title:</label>
+        <input type="text" name="title"
+        placeholder="Enter Message title"
+        value="{{ request.form['title'] }}">
 
-{%  %}
+        <br>
+        <label for="content"> Message Content </label>
+        <br>
+        <textarea name="content" cols="30" rows="10">
+            {{ request.form['content'] }}
+        </textarea>
+
+        <button type="submit">Sumit</button>
+    </form>
+
+{% endblock %}
