@@ -18,9 +18,9 @@
     </nav>
     <hr>
     <div class="content">
-        {% for message in get_flashed_messaged %}
-        <div class="alert">{{ message }}</div>
-        {% endfor %}
+           {% for message in get_flashed_messaged %}
+              <div class="alert">{{ message }}</div>
+           {% endfor %}
         {% block content %} {% endblock %}
     </div>
 </body>
