@@ -15,3 +15,10 @@ nav a {
     margin-left: 50px;
     text-decoration: none;
 }
+
+.alert{
+    padding: 20px;
+    margin: 5px;
+    color: #970020;
+    background-color: #ffd5de;
+}
